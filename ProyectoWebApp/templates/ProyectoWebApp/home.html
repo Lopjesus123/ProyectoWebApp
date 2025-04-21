@@ -1,120 +1,136 @@
-{% extends "ProyectoWebApp/base.html" %}
+<html>
 
-{% load static %}
-
-
-{% block content %}
+<head>
 
 
-  <section class="banner-principal">        <!-- imaen de inico -->
-    <div class="banner-contenido-central">
-      <h4>El principio de la atracción</h4>
-      <h1>Esto es Nissan Magnite 2025</h1>
-      <p>Conquista cada camino con potencia, diseño y tecnología.</p>
-      <a href="#" class="btn-nissan">CONOCE MÁS</a>
-    </div>
-  </section>
+
+    <!-- Bootstrap -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- Fonts -->
+    
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+     
+
+    <!-- Styles -->
+    <link href="/css/gestion.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      
+        <span class="site-heading-lower">Gestión de Pedidos</span>
+      </h1>
 
 
-  <section class="modelos-nissan">
-    <div class="container-modelos">
-
-      <!-- Filtro de categorías -->
-      <ul class="categorias">
-        <li class="active">Destacados del mes</li>
-        <li>Todos</li>
-        <li>Autos</li>
-        <li>Nissan</li>
-        <li>Mazda</li>
-        <li>Toyota</li>
-        <li>Honda</li>
-        <li>Kia</li>
-      </ul>
-
-      <!-- Galería de modelos -->
-      <div class="galeria-autos">
-        <div class="modelo">
-          <img src="{% static 'ProyectoWebApp/img/nissan1.jpg' %}" alt="Nissan Magnite">
-          <p>Nissan Magnite</p>
-        </div>
-        <div class="modelo">
-          <img src="{% static 'ProyectoWebApp/img/versa1.jpg' %}" alt="Nissan Versa">
-          <p>Nissan Versa</p>
-        </div>
-        <div class="modelo">
-          <img src="{% static 'ProyectoWebApp/img/sentra1.jpg' %}" alt="Nissan Sentra">
-          <p>Nissan Sentra</p>
-        </div>
-
-        <!-- Puedes añadir más modelos -->
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="home.html">Gestión de Pedidos</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="home.html">Inicio</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="servicios.html">Servicios</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="tienda.html">Tienda</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="blog.html">Blog</a>
+          </li>
+         
+        </ul>
       </div>
     </div>
-  </section>
+  </nav>
 
 
-
-
-
-
-
-
-  <!-- Sección: Entrega a domicilio / Prueba en casa -->
-<section class="page-section clearfix">
-  <div class="container">
-    <div class="intro">
-      <img class="intro-img" src="{% static 'ProyectoWebApp/img/testdrive.jpg' %}" alt="Entrega a domicilio">
-      <div class="intro-text text-center">
-        <h2 class="section-heading mb-4">
-          <span class="section-heading-upper">PRUEBA DONDE QUIERAS</span>
-          <span class="section-heading-lower">Auto a domicilio</span>
-        </h2>
-        <p class="mb-3">
-          ¿Te gustaría probar tu próximo auto sin moverte de casa? Nosotros te lo llevamos.<br>
-          Solicita una prueba de manejo a domicilio y descubre la experiencia JM desde la comodidad de tu hogar.
-        </p>
-        <a href="#" class="btn-ver-mas">Solicitar prueba</a>
-      </div>
-    </div>
-  </div>
-  <div style="clear: both;"></div>
-</section>
-
-
-
-
-   <!-- Sección: Garantía -->
-<section class="page-section cta">
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-9 mx-auto">
-        <div class="cta-inner text-center rounded">
-
-          <!-- Ícono -->
-          <i class="fas fa-shield-alt garantia-icon"></i>
-
-          <!-- Título -->
-          <h2 class="section-heading mb-4">
-            <span class="section-heading-upper">Compromiso total</span>
-            <span class="section-heading-lower">Garantizado</span>
+   <!-- Heading -->
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="/img/principal.jpg" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-upper">Puntualidad</span>
+            <span class="section-heading-lower">El mejor stock</span>
           </h2>
-
-          <!-- Descripción -->
-          <p class="mb-3">
-            Con más de 75 años de trayectoria, en Agencia JM combinamos experiencia, compromiso y tecnología para ofrecerte un servicio eficiente, seguro y personalizado. Nuestro equipo se encarga de que cada entrega llegue a tu hogar con la puntualidad y la confianza que nos distingue.
+          <p class="mb-3">En la puertra de tu casa en menos de 48 h con el envío normal. En menos de 24 h con el envío express.
           </p>
-
-          <!-- Lista de beneficios -->
-          <ul class="garantia-list">
-            <li><i class="fas fa-check-circle"></i> Entrega puntual garantizada</li>
-            <li><i class="fas fa-check-circle"></i> Soporte personalizado 24/7</li>
-            <li><i class="fas fa-check-circle"></i> Satisfacción 100% asegurada</li>
-          </ul>
-
+         
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-{% endblock %}
+  
+    <!-- Message -->
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">Compromiso total</span>
+                <span class="section-heading-lower">Garantizado</span>
+              </h2>
+              <p class="mb-0">Con más de 75 años de experiencia a nuestras espaldas, desde Gestión de Pedidos tenemos los conocimientos y herramientas necesarios para llevar cualquier objeto a la puerta de su casa con puntualidad y profesionalidad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0">
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	    </p>
+        <p class="m-0 mbt">
+        	<a href="sample.html" class="link">Política de privacidad</a> ·
+        	<a href="sample.html" class="link">Aviso legal</a> ·
+        	<a href="sample.html" class="link">Cookies</a>
+		</p>
+        <p class="m-0 mbt1">&copy; Gestión de Pedidos 2020</p>
+      </div>
+	</footer>
+
+    <!-- Bootstrap -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+
+</html>

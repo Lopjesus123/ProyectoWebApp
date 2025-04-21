@@ -1,14 +1,10 @@
-
-
 body {
   font-family: 'Lora';
-  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/negro.jpg");
-  background-repeat: no-repeat !important ;
-  background-attachment: fixed !important;
-  background-position: center !important;
-  background-size: cover !important;
+  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg_main.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
-
 
 h1,
 h2,
@@ -128,121 +124,65 @@ p {
 .intro {
   position: relative;
 }
-/* Intro - Sección Auto a Domicilio Modernizada */
-.intro {
-  position: relative;
-}
 
 @media (min-width: 992px) {
-  .intro {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  .intro .intro-img {
+    width: 75%;
+    float: left;
+  }
+  .intro .intro-text {
+    left: 600;
+    width: 60%;
+    margin-top: 3rem;
+    background-color: rgba(24, 64, 8);
+    color: cornsilk;
+    position: absolute;
+  }
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
   }
 }
-
-.intro .intro-img {
-  width: 60%;
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
-}
-
-.intro .intro-text {
-  width: 70%;
-  background-color: #112D32; /* Verde gris oscuro moderno */
-  color: #DFF6F0;            /* Verde agua claro */
-  padding: 2.5rem;
-  border-radius: 1rem;
-  font-family: 'Raleway', sans-serif;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.intro .intro-text h2 {
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #DFF6F0;
-  text-transform: uppercase;
-}
-
-.intro .intro-text p {
-  font-size: 1rem;
-  color: #CFE8E2;
-  line-height: 1.6;
-}
-
-.intro .intro-text a.btn-ver-mas {
-  background-color: #F94144; /* Rojo moderno */
-  color: white;
-  padding: 0.6rem 1.5rem;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 1rem;
-}
-
-.intro .intro-text a.btn-ver-mas:hover {
-  background-color: #D62828;
-  transform: scale(1.05);
-}
-
-
 
 @media (min-width: 1200px) {
   .intro .intro-text {
     width: 45%;
   }
 }
-.cta-inner {
+
+.cta {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: rgb(242, 245, 240);
+}
+
+.cta .cta-inner {
   position: relative;
   padding: 3rem;
   margin: 0.5rem;
-  background-color: #1E2D2F; /* Elegante gris-verdoso */
-  color: #F2F2F2;
-  border-radius: 10px;
-  font-family: 'Raleway';
+  background-color: rgba(24, 64, 8);
+  color: cornsilk;
 }
 
-.cta-inner h2 {
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.cta .cta-inner:before {
+  border-radius: 0.5rem;
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  border: 0.25rem solid rgba(255, 255, 255, 0.85);
 }
 
-.cta-inner p {
-  font-size: 1rem;
-  color: #e0e0e0;
-  line-height: 1.7;
+.cta .cta-innerv {
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.85);
 }
-
-.cta-inner .btn-ver-mas,
-.cta-inner .btn-nissan {
-  display: inline-block;
-  margin-top: 1.5rem;
-  background-color: #FF3B3F; /* Rojo moderno */
-  color: #fff;
-  padding: 0.6rem 1.8rem;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.cta-inner .btn-ver-mas:hover,
-.cta-inner .btn-nissan:hover {
-  background-color: #e0292d;
-  transform: scale(1.05);
-}
-
-.cta-inner .btn-nissan:hover {
-  box-shadow: 0 4px 10px rgba(255, 59, 63, 0.4);
-}
-
-
 
 @media (min-width: 992px) {
   .about-heading .about-heading-img {
@@ -336,462 +276,4 @@ ul.errorlist{
   padding-top: .75rem;
   font-style: italic;
   color: red;
-}
-
-.page-section,
-.autos-destacados,
-.cta {
-  background-color: rgba(129, 11, 11, 0.85);
-  padding: 3rem 1rem;
-  border-radius: 0.5rem;
-  width: 95%;
-  max-width: 1200px;
-  margin: 2rem auto;
-}
-
-
-/* CONTENEDOR PRINCIPAL */
-.autos-destacados {
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
-  padding: 4rem 2rem;
-  border-radius: 12px;
-  margin: 4rem auto;
-  max-width: 1200px;
-  width: 95%;
-  text-align: center;
-}
-
-/* TÍTULO */
-.autos-destacados h2 {
-  font-family: 'Raleway', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  letter-spacing: 1px;
-  font-weight: 600;
-  color: #1a1a1a;
-}
-
-/* CONTENEDOR DE CARDS */
-.autos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem 4rem;
-}
-
-/* CARD INDIVIDUAL */
-.auto-card {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  transition: transform 0.3s ease;
-}
-
-.auto-card:hover {
-  transform: translateY(-5px);
-}
-
-.auto-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.auto-card h3 {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-  color: #1c1c1c;
-}
-
-.auto-card p {
-  font-family: 'Lora', serif;
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-/* BOTÓN "VER MÁS" */
-.btn-ver-mas {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  background-color: #002d56;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
-}
-
-.btn-ver-mas:hover {
-  background-color: #003c75;
-}
-
-/* HERO BANNER */
-.hero-banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/negro.jpg") center/cover no-repeat;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-contenido {
-  color: white;
-  font-family: 'Raleway';
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 1rem;
-}
-
-.hero-contenido h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-contenido p {
-  font-size: 1.25rem;
-}
-
-/* AUTOS */
-.autos-destacados {
-  text-align: center;
-  padding: 4rem 1rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  width: 90%;
-  max-width: 1200px;
-  margin: 3rem auto;
-}
-
-.autos-destacados h2 {
-  font-family: 'Raleway';
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #1a1a1a;
-  text-transform: uppercase;
-}
-
-.autos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.auto-card {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  width: 280px;
-  transition: transform 0.3s ease;
-}
-
-.auto-card:hover {
-  transform: translateY(-5px);
-}
-
-.auto-card img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.auto-card h3 {
-  font-family: 'Raleway';
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-  color: #1a1a1a;
-}
-
-.auto-card p {
-  font-family: 'Lora';
-  font-size: 0.95rem;
-  color: #333;
-}
-
-/* BOTÓN VER MÁS */
-.btn-ver-mas {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #1b4d1a;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.btn-ver-mas:hover {
-  background-color: #145c14;
-}
-
-/* FOOTER MEJORADO */
-.footer {
-  background-color: #1b4d1a;
-  color: white;
-  padding: 3rem 1rem;
-  border-top: 3px solid #e6b800;
-}
-
-.footer a.link {
-  color: #e6e6e6;
-}
-
-.footer a.link:hover {
-  color: #e6b800;
-  text-decoration: none;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .autos-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-contenido h1 {
-    font-size: 2rem;
-  }
-
-  .hero-contenido p {
-    font-size: 1rem;
-  }
-}
-.banner-principal {
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-              url("../img/nissan1.jpg") center/cover no-repeat;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  padding: 0 2rem;
-}
-
-.banner-contenido-central {
-  max-width: 700px;
-  background-color: rgba(0,0,0,0.4);
-  padding: 2rem 2.5rem;
-  border-radius: 15px;
-  animation: fadeIn 1s ease-out;
-}
-
-.banner-contenido-central h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  font-weight: 300;
-  color: #f5f5f5;
-}
-
-.banner-contenido-central h1 {
-  font-size: 2.8rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.banner-contenido-central p {
-  font-size: 1.1rem;
-  margin-bottom: 1.8rem;
-  color: #e0e0e0;
-}
-
-/* Botón tipo Nissan */
-.btn-nissan {
-  display: inline-block;
-  padding: 0.75rem 2rem;
-  background-color: #ffffff;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 30px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.btn-nissan:hover {
-  background-color: #e6e6e6;
-  transform: scale(1.05);
-}
-
-/* Animación suave */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* Navbar con mejor presencia y color */
-.navbar-agencia {
-  background-color: #1C1C1C;
-  padding: 0.5rem 0;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-}
-
-.navbar-agencia .navbar-brand {
-  color: #FF0000;
-  font-size: 1.6rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.navbar-agencia .navbar-brand:hover {
-  color: #FF3B3F;
-}
-
-.navbar-agencia .nav-link {
-  color: #F5F5F5;
-  margin-left: 3rem;
-  font-size:1rem;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.navbar-agencia .nav-link::after {
-  content: "";
-  display: block;
-  width: 0%;
-  height: 2px;
-}
-
-.garantia-icon {
-  font-size: 2.8rem;
-  color: #F9D342; /* dorado suave */
-  margin-bottom: 1rem;
-}
-
-.garantia-list {
-  list-style: none;
-  padding: 0;
-  color: #e0e0e0;
-  margin-top: 1rem;
-}
-
-.garantia-list li {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  font-family: 'Raleway';
-}
-
-.garantia-list i {
-  color: #4CAF50;
-  margin-right: 0.5rem;
-}
-
-.page-section,
-.autos-destacados,
-.cta {
-  padding: 5rem 2rem; /* Antes estaba en 3rem 1rem */
-  margin-bottom: 4rem; /* separa entre secciones */
-}
-
-.autos-grid {
-  gap: 2.5rem; /* antes 2rem */
-}
-
-.intro {
-  gap: 3rem;
-}
-
-.cta-inner p {
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.8;
-}
-
-.auto-card,
-.cta-inner {
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
-}
-
-.auto-card {
-  padding: 2rem;
-}
-
-body {
-  margin-top: 100px;
-}
-
-
-.modelos-nissan {
-  background-color: #f9f9f9;
-  padding: 4rem 2rem;
-  font-family: 'Raleway', sans-serif;
-}
-
-.container-modelos {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.categorias {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-bottom: 3rem;
-  padding: 0;
-}
-
-.categorias li {
-  font-weight: 600;
-  color: #888;
-  cursor: pointer;
-  padding: 0.5rem 0.8rem;
-  transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
-}
-
-.categorias li:hover,
-.categorias li.active {
-  color: black;
-  border-bottom: 2px solid #000;
-}
-
-.galeria-autos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  justify-content: center;
-}
-
-.modelo {
-  text-align: center;
-  width: 150px;
-}
-
-.modelo img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.modelo img:hover {
-  transform: scale(1.05);
-}
-
-.modelo p {
-  font-weight: 600;
-  margin-top: 0.8rem;
-  color: #1a1a1a;
-  font-size: 0.95rem;
 }
