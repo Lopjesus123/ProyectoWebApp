@@ -26,10 +26,6 @@ def blog(request):
 
     return render(request,"ProyectoWebApp/blog.html")
 
-def sobre_nostros(request):
-
-    return render(request,"ProyectoWebApp/sobre_nosotros.html")
-
 def contacto(request):
 
     return render(request,"ProyectoWebApp/contacto.html")
