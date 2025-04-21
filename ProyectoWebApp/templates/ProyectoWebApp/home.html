@@ -1,0 +1,120 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+  <section class="banner-principal">        <!-- imaen de inico -->
+    <div class="banner-contenido-central">
+      <h4>El principio de la atracción</h4>
+      <h1>Esto es Nissan Magnite 2025</h1>
+      <p>Conquista cada camino con potencia, diseño y tecnología.</p>
+      <a href="#" class="btn-nissan">CONOCE MÁS</a>
+    </div>
+  </section>
+
+
+  <section class="modelos-nissan">
+    <div class="container-modelos">
+
+      <!-- Filtro de categorías -->
+      <ul class="categorias">
+        <li class="active">Destacados del mes</li>
+        <li>Todos</li>
+        <li>Autos</li>
+        <li>Nissan</li>
+        <li>Mazda</li>
+        <li>Toyota</li>
+        <li>Honda</li>
+        <li>Kia</li>
+      </ul>
+
+      <!-- Galería de modelos -->
+      <div class="galeria-autos">
+        <div class="modelo">
+          <img src="{% static 'ProyectoWebApp/img/nissan1.jpg' %}" alt="Nissan Magnite">
+          <p>Nissan Magnite</p>
+        </div>
+        <div class="modelo">
+          <img src="{% static 'ProyectoWebApp/img/versa1.jpg' %}" alt="Nissan Versa">
+          <p>Nissan Versa</p>
+        </div>
+        <div class="modelo">
+          <img src="{% static 'ProyectoWebApp/img/sentra1.jpg' %}" alt="Nissan Sentra">
+          <p>Nissan Sentra</p>
+        </div>
+
+        <!-- Puedes añadir más modelos -->
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <!-- Sección: Entrega a domicilio / Prueba en casa -->
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <img class="intro-img" src="{% static 'ProyectoWebApp/img/testdrive.jpg' %}" alt="Entrega a domicilio">
+      <div class="intro-text text-center">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-upper">PRUEBA DONDE QUIERAS</span>
+          <span class="section-heading-lower">Auto a domicilio</span>
+        </h2>
+        <p class="mb-3">
+          ¿Te gustaría probar tu próximo auto sin moverte de casa? Nosotros te lo llevamos.<br>
+          Solicita una prueba de manejo a domicilio y descubre la experiencia JM desde la comodidad de tu hogar.
+        </p>
+        <a href="#" class="btn-ver-mas">Solicitar prueba</a>
+      </div>
+    </div>
+  </div>
+  <div style="clear: both;"></div>
+</section>
+
+
+
+
+   <!-- Sección: Garantía -->
+<section class="page-section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="cta-inner text-center rounded">
+
+          <!-- Ícono -->
+          <i class="fas fa-shield-alt garantia-icon"></i>
+
+          <!-- Título -->
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">Compromiso total</span>
+            <span class="section-heading-lower">Garantizado</span>
+          </h2>
+
+          <!-- Descripción -->
+          <p class="mb-3">
+            Con más de 75 años de trayectoria, en Agencia JM combinamos experiencia, compromiso y tecnología para ofrecerte un servicio eficiente, seguro y personalizado. Nuestro equipo se encarga de que cada entrega llegue a tu hogar con la puntualidad y la confianza que nos distingue.
+          </p>
+
+          <!-- Lista de beneficios -->
+          <ul class="garantia-list">
+            <li><i class="fas fa-check-circle"></i> Entrega puntual garantizada</li>
+            <li><i class="fas fa-check-circle"></i> Soporte personalizado 24/7</li>
+            <li><i class="fas fa-check-circle"></i> Satisfacción 100% asegurada</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

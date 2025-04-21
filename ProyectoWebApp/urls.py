@@ -1,0 +1,14 @@
+from django.urls import path
+from ProyectoWebApp import views
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+    path('', views.home, name="home"),
+    path('autos-disponibles/', views.autos_disponibles, name="autos_disponibles"),
+    path('servicios/', views.servicios, name="servicios"),
+    path('blog/', views.blog, name="blog"),
+    path('sobre-nosotros/', views.sobre_nostros, name="sobre_nosotros"),
+    path('contacto/', views.contacto, name="contacto"),
+]
