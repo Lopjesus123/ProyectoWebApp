@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Auto
+# from .models import Auto
+# admin.site.register(Auto)
 
-admin.site.register(Auto)
 
 # Register your models here.
