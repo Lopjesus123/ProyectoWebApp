@@ -11,5 +11,3 @@ class Auto(models.Model):
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     #imagen = models.ImageField(upload_to='autos/')  # Asegúrate de tener Pillow instalado
 
-    def __str__(self):
-        return f"{self.marca} {self.modelo} ({self.año})"

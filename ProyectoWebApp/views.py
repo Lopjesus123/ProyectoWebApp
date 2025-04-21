@@ -10,12 +10,8 @@ def home(request):
 
 
 def autos_disponibles(request):
-    marca_filtrada = request.GET.get('marca')
-    if marca_filtrada:
-        autos = Auto.objects.filter(marca=marca_filtrada)
-    else:
-        autos = Auto.objects.all()
-    return render(request, "ProyectoWebApp/autos_disponibles.html", {"autos": autos})
+
+    return render(request,"ProyectoWebApp/autos_disponibles.html")
 
 
 def servicios(request):
@@ -25,10 +21,6 @@ def servicios(request):
 def blog(request):
 
     return render(request,"ProyectoWebApp/blog.html")
-
-def sobre_nostros(request):
-
-    return render(request,"ProyectoWebApp/sobre_nosotros.html")
 
 def contacto(request):
 
