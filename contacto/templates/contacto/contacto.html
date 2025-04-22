@@ -11,10 +11,11 @@
   <div class="form-container">
     {% csrf_token%}
 
-    """{% if "valido" in request.GET %}
-      <p>info mandanda</p>
-    {% endif %}""""
-    
+    {% if enviado %}
+      <p class="mensaje-exito">Información enviada correctamente, ¡gracias por contactarnos!</p>
+    {% endif %}
+
+
     <h2>Contáctanos</h2>
     <p>¿Tienes dudas o quieres más información sobre tu próximo auto?</p>
 

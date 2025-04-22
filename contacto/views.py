@@ -4,17 +4,25 @@ from .forms import FormularioContacto
 # Create your views here.
 
 
+
 def contacto(request):
-    formulario_contacto=FormularioContacto()
+    formulario_contacto = FormularioContacto()
+    enviado = False  # Agregamos esta línea
 
-    if request.method=="POST":
-        formulario_contacto=FormularioContacto(data=request.POST)
+    if request.method == "POST":
+        formulario_contacto = FormularioContacto(data=request.POST)
         if formulario_contacto.is_valid():
-            nombre=request.POST.get("nombre")
-            email=request.POST.get("email")
-            contenido=request.POST.get("contenido")
+            nombre = request.POST.get("nombre")
+            email = request.POST.get("email")
+            contenido = request.POST.get("contenido")
 
-            return redirect("/contacto/?valido")
+            return redirect("/contacto/?valido=True")
 
+    # Verificamos si ?valido=True está en la URL
+    if 'valido' in request.GET:
+        enviado = True
 
-    return render(request,"contacto/contacto.html", {'miFormulario': formulario_contacto})
+    return render(request, "contacto/contacto.html", {
+        'miFormulario': formulario_contacto,
+        'enviado': enviado
+    })
