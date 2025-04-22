@@ -19,10 +19,6 @@ def autos_disponibles(request):
     return render(request, "ProyectoWebApp/autos_disponibles.html", {"autos": autos})
 
 
-def blog(request):
-
-    return render(request,"ProyectoWebApp/blog.html")
-
 def contacto(request):
 
     return render(request,"ProyectoWebApp/contacto.html")
