@@ -59,62 +59,41 @@
 
 
   <!-- Sección: Entrega a domicilio / Prueba en casa -->
-<section class="page-section clearfix">
-  <div class="container">
-    <div class="intro">
-      <img class="intro-img" src="{% static 'ProyectoWebApp/img/testdrive.jpg' %}" alt="Entrega a domicilio">
-      <div class="intro-text text-center">
-        <h2 class="section-heading mb-4">
-          <span class="section-heading-upper">PRUEBA DONDE QUIERAS</span>
-          <span class="section-heading-lower">Auto a domicilio</span>
-        </h2>
-        <p class="mb-3">
-          ¿Te gustaría probar tu próximo auto sin moverte de casa? Nosotros te lo llevamos.<br>
-          Solicita una prueba de manejo a domicilio y descubre la experiencia JM desde la comodidad de tu hogar.
-        </p>
-        <a href="#" class="btn-ver-mas">Solicitar prueba</a>
+  <section class="auto-domicilio">
+    <div class="contenido-auto-domicilio">
+      <div class="imagen-auto">
+        <img src="{% static 'ProyectoWebApp/img/testdrive.jpg' %}" alt="Auto a domicilio">
+      </div>
+      <div class="texto-auto">
+        <h5>PRUEBA DONDE QUIERAS</h5>
+        <h2>AUTO A DOMICILIO</h2>
+        <p>¿Te gustaría probar tu próximo auto sin moverte de casa? Nosotros te lo llevamos. Solicita una prueba de manejo a domicilio y descubre la experiencia JM desde la comodidad de tu hogar.</p>
+        <a href="#" class="btn-prueba">Solicitar prueba</a>
       </div>
     </div>
-  </div>
-  <div style="clear: both;"></div>
-</section>
+  </section>
 
 
 
 
-   <!-- Sección: Garantía -->
-<section class="page-section cta">
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-9 mx-auto">
-        <div class="cta-inner text-center rounded">
 
-          <!-- Ícono -->
-          <i class="fas fa-shield-alt garantia-icon"></i>
-
-          <!-- Título -->
-          <h2 class="section-heading mb-4">
-            <span class="section-heading-upper">Compromiso total</span>
-            <span class="section-heading-lower">Garantizado</span>
-          </h2>
-
-          <!-- Descripción -->
-          <p class="mb-3">
-            Con más de 75 años de trayectoria, en Agencia JM combinamos experiencia, compromiso y tecnología para ofrecerte un servicio eficiente, seguro y personalizado. Nuestro equipo se encarga de que cada entrega llegue a tu hogar con la puntualidad y la confianza que nos distingue.
-          </p>
-
-          <!-- Lista de beneficios -->
-          <ul class="garantia-list">
-            <li><i class="fas fa-check-circle"></i> Entrega puntual garantizada</li>
-            <li><i class="fas fa-check-circle"></i> Soporte personalizado 24/7</li>
-            <li><i class="fas fa-check-circle"></i> Satisfacción 100% asegurada</li>
-          </ul>
-
-        </div>
-      </div>
+  <section class="seccion-compromiso">
+    <div class="compromiso-card">
+      <div class="compromiso-icono">🛡️</div>
+      <div class="compromiso-subtitulo">COMPROMISO TOTAL</div>
+      <div class="compromiso-titulo">GARANTIZADO</div>
+      <p class="compromiso-descripcion">
+        Con más de 75 años de trayectoria, en Agencia JM combinamos experiencia, compromiso y tecnología para ofrecerte un servicio eficiente, seguro y personalizado. Nuestro equipo se encarga de que cada entrega llegue a tu hogar con la puntualidad y la confianza que nos distingue.
+      </p>
+      <ul class="compromiso-lista">
+        <li>Entrega puntual garantizada</li>
+        <li>Soporte personalizado 24/7</li>
+        <li>Satisfacción 100% asegurada</li>
+      </ul>
+      <p class="frase-final">"Confianza que se gana kilómetro a kilómetro."</p>
     </div>
-  </div>
-</section>
+  </section>
+
 
 
 {% endblock %}
