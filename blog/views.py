@@ -6,10 +6,19 @@ from blog.models import Post, Categoria
 
 
 def blog(request):
-    posts=Post.objects.all()
-    return render(request,"blog/blog.html", {"posts":posts})
+    posts = Post.objects.prefetch_related('categoria').all()
+    categorias = Categoria.objects.all()
+    return render(request, "blog/blog.html", {
+        "posts": posts,
+        "categorias": categorias
+    })
 
 def categoria(request, categoria_id):
-    categoria=Categoria.objects.get(id=categoria_id)
+    categoria = Categoria.objects.get(id=categoria_id)
     posts = Post.objects.filter(categoria=categoria)
-    return render(request ,"blog/categoria.html", {'categoria':categoria, "posts":posts})
+    categorias = Categoria.objects.all()
+    return render(request, "blog/categoria.html", {
+        "categoria": categoria,
+        "posts": posts,
+        "categorias": categorias
+    })

@@ -2,65 +2,47 @@
 
 {% load static %}
 {% block extra_head %}
-<link rel="stylesheet" href="{% static 'ProyectoWebApp/css/servicios.css' %}">
+<link rel="stylesheet" href="{% static 'ProyectoWebApp/css/blog.css' %}">
 {% endblock %}
-
-
 
 {% block content %}
 
+<!-- ENCABEZADO DE CATEGORÍA -->
+<section class="categoria-banner">
+  <div class="categoria-banner-contenido">
+    <h1 class="categoria-banner-titulo">Categoría: <span>{{ categoria.nombre }}</span></h1>
+  </div>
+</section>
+
+<!-- POSTS DE LA CATEGORÍA -->
+<section class="blog-container">
+
   {% for post in posts %}
-
-
-  <div class="servicio-card">
-    <img src="{{ post.imagen.url }}" alt="{{ post.titulo }}">
-    <div class="servicio-info">
-      <h2 class="section-heading mb-4">
-        <span class="section-heading-upper">{{ post.titulo }}</span>
-        <span class="section-heading-lower">{{ post.contenido }}</span>
-      </h2>
-
-
-      <div style="text-align: left; font-size: 0.8em;">
-
-        Autor: {{post.autor}}
-
+  <div class="blog-card">
+    <img src="{{ post.imagen.url }}" alt="{{ post.titulo }}" class="blog-image">
+    <div class="blog-content">
+      <h2 class="blog-title">{{ post.titulo }}</h2>
+      <p class="blog-description">{{ post.contenido }}</p>
+      <p class="blog-author">Publicado por: {{ post.autor }}</p>
+      <div class="blog-categories">
+        {% for categoria in post.categoria.all %}
+          <a href="{% url 'categoria' categoria.id %}" class="category-link">{{ categoria.nombre }}</a>
+        {% endfor %}
       </div>
     </div>
   </div>
-
-
   {% endfor %}
 
-  <section>
-    <div style="width: 75%; margin: auto; text-align: center; color: aqua;">
+</section>
 
-        Categorias:
-
-        {% for post in posts %}
-
-            {%for categoria in post.categorias.all%}
-
-
-             {{categoria.nombre}} &nbsp;&nbsp;&nbsp;
-
-             {% endfor %}
-
-
-
-
-        {% endfor %}
-
-
-
-
-
-
-
-    </div>
-
-
-
-  </section>
+<!-- FOOTER DE CATEGORÍAS -->
+<section class="categorias-footer">
+  <h3 class="categorias-footer-titulo">Categorías:</h3>
+  <div class="categorias-footer-links">
+    {% for categoria in categorias %}
+      <a href="{% url 'categoria' categoria.id %}" class="footer-category-link">{{ categoria.nombre }}</a>
+    {% endfor %}
+  </div>
+</section>
 
 {% endblock %}
