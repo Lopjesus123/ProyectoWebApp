@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 class Categoria(models.Model):
 
-    nomnbre = models.CharField(max_length=50)
+    nombre = models.CharField(max_length=50)
     created = models.DateField(auto_now_add=True)
     update = models.DateField(auto_now=True)
 
@@ -15,7 +15,7 @@ class Categoria(models.Model):
         verbose_name_plural = 'categorias'
 
     def __str__(self):
-        return self.nomnbre
+        return self.nombre
 
 
 

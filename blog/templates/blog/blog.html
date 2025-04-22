@@ -1,20 +1,28 @@
 {% extends "ProyectoWebApp/base.html" %}
 
 {% load static %}
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'ProyectoWebApp/css/servicios.css' %}">
+{% endblock %}
+
 
 
 {% block content %}
 
-
-<div></div>
-
+  {% for post in posts %}
 
 
+  <div class="servicio-card">
+    <img src="{{ post.imagen.url }}" alt="{{ post.titulo }}">
+    <div class="servicio-info">
+      <h2 class="section-heading mb-4">
+        <span class="section-heading-upper">{{ servicio.titulo }}</span>
+        <span class="section-heading-lower">{{ servicio.contenido }}</span>
+      </h2>
+    </div>
+  </div>
 
 
-
-
-
-
+  {% endfor %}
 
 {% endblock %}
