@@ -1,14 +1,39 @@
 {% extends "ProyectoWebApp/base.html" %}
-
 {% load static %}
 
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'ProyectoWebApp/css/contacto.css' %}">
+{% endblock %}
 
 {% block content %}
 
+<section class="contacto-section">
+  <div class="form-container">
+    {% csrf_token%}
+    <h2>Contáctanos</h2>
+    <p>¿Tienes dudas o quieres más información sobre tu próximo auto?</p>
 
-<div><p style="color: aliceblue;">{{miFormulario}}</p></div>
+    <form action="" method="POST" class="formulario-contacto">
+      {% csrf_token %}
 
+      <div class="form-group">
+        {{ miFormulario.nombre.label_tag }}
+        {{ miFormulario.nombre }}
+      </div>
 
+      <div class="form-group">
+        {{ miFormulario.email.label_tag }}
+        {{ miFormulario.email }}
+      </div>
 
+      <div class="form-group">
+        {{ miFormulario.contenido.label_tag }}
+        {{ miFormulario.contenido }}
+      </div>
+
+      <button type="submit" class="btn-enviar">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
 
 {% endblock %}
