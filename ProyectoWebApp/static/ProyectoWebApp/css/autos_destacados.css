@@ -1,0 +1,154 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categorias {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    margin: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .categorias li {
+    margin: 10px 15px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #555;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .categorias li.active,
+  .categorias li:hover {
+    color: #002d56;
+  }
+
+  .categorias li.active::after,
+  .categorias li:hover::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #002d56;
+    bottom: -5px;
+    left: 0;
+    border-radius: 10px;
+  }
+
+  .galeria-autos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    gap: 30px;
+    background-color: #fff;
+  }
+
+  .modelo {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .modelo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+
+  .modelo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+
+  .modelo p {
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .modelos-nissan {
+    background-color: #121212;
+    color: #fff;
+    padding: 60px 20px;
+  }
+
+  .modelo {
+    background-color: #1e1e1e;
+  }
+
+  .modelo p {
+    color: #f1f1f1;
+  }
+
+  .categorias li {
+    color: #bbb;
+  }
+
+  .categorias li.active,
+  .categorias li:hover {
+    color: #ffffff;
+  }
+
+  .categorias li.active::after,
+  .categorias li:hover::after {
+    background-color: #ffffff;
+  }
+
+  .modelos-nissan {
+    background-color: #121212; /* fondo oscuro elegante */
+    padding: 60px 0;
+  }
+
+  .container-modelos {
+    background-color: transparent; /* sin fondo blanco */
+    padding: 0 20px;
+  }
+
+  .categorias {
+    background-color: #121212; /* mismo fondo que el padre */
+    border-bottom: 1px solid #333;
+  }
+
+  .categorias li {
+    color: #bbb;
+  }
+
+  .categorias li.active,
+  .categorias li:hover {
+    color: #fff;
+  }
+
+  .categorias li.active::after,
+  .categorias li:hover::after {
+    background-color: #ff0000; /* línea roja si quieres combinar con tu encabezado */
+  }
+
+  /* Ajustes visuales de tarjetas */
+  .modelo {
+    background-color: #1e1e1e;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  }
+
+  .modelo p {
+    color: #f5f5f5;
+  }
+
+  .galeria-autos {
+    background-color: transparent;
+  }
