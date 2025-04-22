@@ -10,12 +10,21 @@
 <section class="contacto-section">
   <div class="form-container">
 
-    {% if enviado %}
+    <!-- MENSAJE DE ÉXITO O ERROR -->
+    {% if request.GET.valido %}
       <div class="mensaje-exito">
-        <i class="fa-solid fa-circle-check"></i> Información enviada correctamente, ¡gracias por contactarnos!
+        <i class="fa-solid fa-circle-check"></i>
+        Tu mensaje ha sido enviado correctamente. ¡Gracias por contactarnos!
+      </div>
+    {% elif request.GET.novalido %}
+      <div class="mensaje-error">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Hubo un error al enviar tu mensaje. Intenta más tarde o escríbenos directamente a
+        <a href="mailto:agenciajm123@gmail.com">agenciajm123@gmail.com</a>
       </div>
     {% endif %}
 
+    <!-- FORMULARIO DE CONTACTO -->
     <h2 class="form-title">Contáctanos</h2>
     <p class="form-subtitle">¿Tienes dudas o quieres más información sobre tu próximo auto?</p>
 
@@ -37,7 +46,9 @@
         {{ miFormulario.contenido }}
       </div>
 
-      <button type="submit" class="btn-enviar">Enviar mensaje</button>
+      <button type="submit" class="btn-enviar">
+        <i class="fa-solid fa-paper-plane"></i> Enviar mensaje
+      </button>
     </form>
   </div>
 </section>
