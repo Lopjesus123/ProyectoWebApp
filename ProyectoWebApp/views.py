@@ -1,6 +1,4 @@
 from django.shortcuts import render, HttpResponse
-from servicios.models import Servicios
-
 
 from .models import Auto #ignorar , si borra mama todo
 
@@ -20,11 +18,6 @@ def autos_disponibles(request):
         autos = Auto.objects.all()
     return render(request, "ProyectoWebApp/autos_disponibles.html", {"autos": autos})
 
-
-def servicios(request):
-
-    servicios=Servicios.objects.all()
-    return render(request,"ProyectoWebApp/servicios.html", {"servicios": servicios} )
 
 def blog(request):
 

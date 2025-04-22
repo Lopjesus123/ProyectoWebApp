@@ -1,0 +1,35 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'ProyectoWebApp/css/servicios.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+
+  {% for servicio in servicios %}
+
+
+
+  <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{servicio.imagen.url}}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-lower">{{ servicio.titulo }}</span>
+            <span class="section-heading-upper">{{ servicio.contenido }}</span>
+          </h2>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  {% endfor %}
+
+{% endblock %}
