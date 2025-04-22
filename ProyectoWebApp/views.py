@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 
-from .models import Auto #ignorar , si borra mama todo
+# from .models import Auto
 
 # Create your views here.
 
@@ -8,13 +8,4 @@ from .models import Auto #ignorar , si borra mama todo
 def home(request):
 
     return render(request,"ProyectoWebApp/home.html")
-
-
-def autos_disponibles(request):
-    marca_filtrada = request.GET.get('marca')
-    if marca_filtrada:
-        autos = Auto.objects.filter(marca=marca_filtrada)
-    else:
-        autos = Auto.objects.all()
-    return render(request, "ProyectoWebApp/autos_disponibles.html", {"autos": autos})
 
