@@ -277,3 +277,58 @@ body {
     font-style: italic;
     color: red;
   }
+
+  .servicio-card {
+    margin-bottom: 3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .servicio-card img {
+    max-width: 100%;
+    width: 300px;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+  }
+
+  .servicio-info {
+    flex: 1;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+
+  .servicio-info .section-heading-upper {
+    color: #002d56;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .servicio-info .section-heading-lower {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .servicio-card {
+      flex-direction: column;
+    }
+
+    .servicio-card img {
+      width: 90%;
+      margin-bottom: 1rem;
+    }
+
+    .servicio-info {
+      padding: 1rem;
+    }
+  }
