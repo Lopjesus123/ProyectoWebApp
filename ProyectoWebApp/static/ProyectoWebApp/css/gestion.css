@@ -795,3 +795,53 @@ body {
   color: #1a1a1a;
   font-size: 0.95rem;
 }
+.main-footer {
+  background-color: #002d56;
+  color: cornsilk;
+  padding: 1.5rem 1rem 1rem;
+  text-align: center;
+  font-family: 'Lora';
+  font-size: 0.9rem;
+  border-top: 3px solid #e6e6e6;
+}
+
+.footer-content p {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0.3rem 0 0.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-links li a {
+  color: cornsilk;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+  color: #9bd2f3;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  color: cornsilk;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #9bd2f3;
+}
+
