@@ -10,6 +10,11 @@
 <section class="contacto-section">
   <div class="form-container">
     {% csrf_token%}
+
+    """{% if "valido" in request.GET %}
+      <p>info mandanda</p>
+    {% endif %}""""
+    
     <h2>Contáctanos</h2>
     <p>¿Tienes dudas o quieres más información sobre tu próximo auto?</p>
 
