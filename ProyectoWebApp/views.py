@@ -1,5 +1,8 @@
 from django.shortcuts import render, HttpResponse
-from .models import Auto
+from servicios.models import Servicios
+
+
+from .models import Auto #ignorar , si borra mama todo
 
 # Create your views here.
 
@@ -20,7 +23,8 @@ def autos_disponibles(request):
 
 def servicios(request):
 
-    return render(request,"ProyectoWebApp/servicios.html")
+    servicios=Servicios.objects.all()
+    return render(request,"ProyectoWebApp/servicios.html", {"servicios": servicios} )
 
 def blog(request):
 
