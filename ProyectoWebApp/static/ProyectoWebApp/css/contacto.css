@@ -1,61 +1,88 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #111;
+  color: white;
+}
+
 .contacto-section {
-    padding: 60px 20px;
-    background-color: #1c1c1c;
-    color: white;
-    text-align: center;
-  }
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .form-container {
-    max-width: 600px;
-    margin: auto;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: rgba(0,0,0,0.5);
-  }
+.form-container {
+  background-color: #1c1c1c;
+  padding: 3rem;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
 
-  .formulario-contacto {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+.form-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
 
-  .form-group {
-    text-align: left;
-  }
+.form-subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #aaa;
+}
 
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #ccc;
-  }
+.mensaje-exito {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
 
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #eee;
-    font-size: 1em;
-  }
+.form-group {
+  margin-bottom: 1.5rem;
+}
 
-  .form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-  }
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
 
-  .btn-enviar {
-    background-color: #ff0000;
-    color: white;
-    padding: 12px;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 1rem;
+}
 
-  .btn-enviar:hover {
-    background-color: #cc0000;
-  }
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-enviar {
+  display: block;
+  width: 100%;
+  background-color: #002d56;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #004a8f;
+}

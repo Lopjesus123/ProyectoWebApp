@@ -2,22 +2,22 @@
 {% load static %}
 
 {% block extra_head %}
-<link rel="stylesheet" href="{% static 'ProyectoWebApp/css/contacto.css' %}">
+  <link rel="stylesheet" href="{% static 'ProyectoWebApp/css/contacto.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 {% endblock %}
 
 {% block content %}
-
 <section class="contacto-section">
   <div class="form-container">
-    {% csrf_token%}
 
     {% if enviado %}
-      <p class="mensaje-exito">Información enviada correctamente, ¡gracias por contactarnos!</p>
+      <div class="mensaje-exito">
+        <i class="fa-solid fa-circle-check"></i> Información enviada correctamente, ¡gracias por contactarnos!
+      </div>
     {% endif %}
 
-
-    <h2>Contáctanos</h2>
-    <p>¿Tienes dudas o quieres más información sobre tu próximo auto?</p>
+    <h2 class="form-title">Contáctanos</h2>
+    <p class="form-subtitle">¿Tienes dudas o quieres más información sobre tu próximo auto?</p>
 
     <form action="" method="POST" class="formulario-contacto">
       {% csrf_token %}
@@ -41,5 +41,4 @@
     </form>
   </div>
 </section>
-
 {% endblock %}
