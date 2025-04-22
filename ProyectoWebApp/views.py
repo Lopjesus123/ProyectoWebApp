@@ -18,7 +18,3 @@ def autos_disponibles(request):
         autos = Auto.objects.all()
     return render(request, "ProyectoWebApp/autos_disponibles.html", {"autos": autos})
 
-
-def contacto(request):
-
-    return render(request,"ProyectoWebApp/contacto.html")
