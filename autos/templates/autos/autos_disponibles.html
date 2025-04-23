@@ -1,8 +1,37 @@
 {% extends "ProyectoWebApp/base.html" %}
 {% load static %}
 
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'ProyectoWebApp/css/autos_disponibles.css' %}">
+{% endblock %}
+
 {% block content %}
-  <div class="contenedor-autos">
-    <h2>Próximamente autos disponibles...</h2>
+<section class="autos-section">
+  <h2 class="titulo-seccion">Autos Disponibles</h2>
+  <div class="autos-contenedor">
+    {% for auto in autos %}
+      <div class="auto-card">
+        <div class="imagen-auto">
+          <img src="{{ auto.imagen.url }}" alt="{{ auto.modelo }}">
+        </div>
+        <div class="info-auto">
+          <h3 class="modelo-auto">{{ auto.marca.nombre }} {{ auto.modelo }}</h3>
+          <ul class="detalle-auto">
+            <li><strong>Año:</strong> {{ auto.año }}</li>
+            <li><strong>Precio:</strong> ${{ auto.precio }}</li>
+            <li><strong>Stock:</strong> {{ auto.stock }} unidad{{ auto.stock|pluralize }}</li>
+            <li>
+              {% if auto.disponible %}
+                <span class="disponible">Disponible</span>
+              {% else %}
+                <span class="no-disponible">No disponible</span>
+              {% endif %}
+            </li>
+          </ul>
+          <a href="#" class="btn-detalle">Ver Detalles</a>
+        </div>
+      </div>
+    {% endfor %}
   </div>
+</section>
 {% endblock %}

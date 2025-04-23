@@ -1,0 +1,86 @@
+.autos-section {
+  padding: 60px 20px;
+  background-color: #f4f6f9;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #002d56;
+}
+
+.autos-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.auto-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.auto-card:hover {
+  transform: translateY(-5px);
+}
+
+.imagen-auto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info-auto {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modelo-auto {
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.detalle-auto {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detalle-auto li {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.disponible {
+  color: green;
+  font-weight: bold;
+}
+
+.no-disponible {
+  color: red;
+  font-weight: bold;
+}
+
+.btn-detalle {
+  margin-top: 10px;
+  background-color: #002d56;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-detalle:hover {
+  background-color: #00448d;
+}
